@@ -1,0 +1,893 @@
+﻿<Window x:Class="HaulJournalsUI.HaulJournalsEditingViews.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HaulJournalsUI.HaulJournalsEditingViews"
+        xmlns:main="clr-namespace:HaulJournalsEditing.Main;assembly=HaulJournalsEditing"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Рейсовые журналы" Height="557.9" Width="1242.5" WindowState="Maximized"
+        d:DataContext="{d:DesignInstance {x:Type main:MainViewModel}}" MinWidth="1242.5" MinHeight="703.4">
+    <Window.Resources>
+        <!--Рейсы-->
+        <CollectionViewSource x:Key="VoyagesCollection" Source="{Binding VoyagesCollection}" Filter="VoyagesCollection_OnFilter"/>
+        <!--Суда-->
+        <CollectionViewSource x:Key="VoyagesVesselsCollection" Source="{Binding VoyagesViewModel.Vessels}" Filter="VoyagesVesselsCollection_OnFilter" />
+        <!--Станции-->
+        <CollectionViewSource x:Key="StationsCollection" Source="{Binding StationsCollection}" Filter="StationsCollection_OnFilter"/>
+        <!--Районы-->
+        <CollectionViewSource x:Key="StationsDistrictsCollection" Source="{Binding StationsViewModel.Districts}" Filter="StationsDistrictsCollection_OnFilter"/>
+        <!--Квадраты-->
+        <CollectionViewSource x:Key="StationsSquaresCollection" Source="{Binding StationsViewModel.Squares}" Filter="StationsSquaresCollection_OnFilter"/>
+        <!--Уловы-->
+        <CollectionViewSource x:Key="HaulsCollection" Source="{Binding HaulsCollection}" Filter="HaulsCollection_OnFilter"/>
+        <!--Вариационные ряды-->
+        <CollectionViewSource x:Key="VarSeriesCollection" Source="{Binding VarSeriesCollection}" Filter="VarSeriesCollection_OnFilter"/>
+        <!--Биологические анализы-->
+        <CollectionViewSource x:Key="BioAnsCollection" Source="{Binding BioAnsCollection}" Filter="BioAnsCollection_OnFilter"/>
+        <!--Промеры-->
+        <CollectionViewSource x:Key="MeasurementsCollection" Source="{Binding MeasurementsCollection}" Filter="MeasurementsCollection_OnFilter"/>
+        <!--Справочники-->
+        <CollectionViewSource x:Key="VesselsCollection" Source="{Binding VesselsCollection}" Filter="VesselsCollection_OnFilter"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
+        <!--Основное меню-->
+        <Menu Grid.Row="0">
+            <MenuItem Header="Авторизация" Margin="0,0,0,5" Click="StartLogin"/>
+            <MenuItem Header="Справочники" Margin="0,0,0,5" Command="{Binding Commands.GoToDirectories}"/>
+        </Menu>
+        <!--Панель репозиториев-->
+        <Grid Grid.Row="1" Background="#FFE5E5E5" Height="40">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="210"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="5">
+                <RadioButton GroupName="Repositories" Content="База данных АзНИИРХ" 
+                             IsChecked="{Binding RemoteRepositorySelected}" IsEnabled="{Binding RemoteRepositoryEnabled}"/>
+                <RadioButton GroupName="Repositories" Content="Локальная база данных" 
+                             IsChecked="{Binding LocalRepositorySelected}" IsEnabled="{Binding LocalRepositoryEnabled}"/>
+            </StackPanel>
+            <Button Content=" Сохранить изменения " Command="{Binding Commands.SaveChanges}" Margin="5" Grid.Column="1"/>
+            <Button Content=" Отменить изменения " Command="{Binding Commands.Reload}" Margin="5" Grid.Column="2"/>
+            <Button Content=" Загрузить данные в базу " Margin="5" Grid.Column="3"
+                    Command="{Binding Commands.Upload}" IsEnabled="{Binding LocalRepositorySelected}"/>
+            <Button Content=" Импортировать справочники " Margin="5" Grid.Column="4"
+                    Command="{Binding Commands.ImportToLocal}" IsEnabled="{Binding LocalRepositorySelected}"/>
+        </Grid>
+        <!--Основные вкладки-->
+        <TabControl Grid.Row="2" Background="#FFE5E5E5" SelectedIndex="{Binding SelectedTabItemIndex}" BorderThickness="0">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem"/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+            <!--Вкладка рейсов-->
+            <TabItem Header="Рейсы" TabIndex="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="390"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="52"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!--Кнопки-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                        <Button Content=" Продолжить ввод рейса " Margin="5" Height="42" Width="200" 
+                                Command="{Binding Commands.ContinueVoyage}"/>
+                        <Button Content=" Ввод нового рейса " Margin="5" Height="42" Width="200" 
+                                Command="{Binding VoyagesViewModel.Commands.AddEmptyItem}"/>
+                        <Button Content=" Финализировать выбранный рейс " Margin="5" Height="42" Width="200" 
+                                Command="{Binding VoyagesViewModel.FinalizeVoyage}"/>
+                        <Button Content=" Удалить выбранный рейс " Margin="5" Height="42" Width="200" 
+                                Command="{Binding VoyagesViewModel.Commands.Delete}"/>
+                    </StackPanel>
+                    <!--Параметры рейса-->
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="207"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="210"/>
+                            <ColumnDefinition Width="180"/>
+                        </Grid.ColumnDefinitions>
+                        <!--Выбор судна-->
+                        <Grid Grid.Column="0" Row="0" Grid.RowSpan="2">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="74"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"/>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                                <Label Content="Судно" HorizontalAlignment="Center"/>
+                                <Button Content="X" Height="20" Width="20" Margin="0,0,10,0" HorizontalAlignment="Right" 
+                                        Command="{Binding Commands.SetObjectToNull}" CommandParameter="Vessel"/>
+                            </Grid>
+                            <Label Content="Тип судна:" Grid.Row="1" Grid.Column="0" Margin="3"/>
+                            <ComboBox Grid.Row="1" Grid.Column="1" Margin="3"
+                                          ItemsSource="{Binding VoyagesViewModel.VesselTypes}" 
+                                          SelectedItem="{Binding VoyagesViewModel.SelectedVesselType}"
+                                            />
+                            <DataGrid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="3" AutoGenerateColumns="False"
+                                          IsReadOnly="True" SelectionMode="Single"
+                                          ItemsSource="{Binding Source={StaticResource VoyagesVesselsCollection}}"
+                                          SelectedValue="{Binding VoyagesViewModel.SelectedItem.Vessel}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Тип судна" Binding="{Binding Type}"/>
+                                    <DataGridTextColumn Header="Название судна" Binding="{Binding Name}"/>
+                                </DataGrid.Columns>
+                                <!--Изменение цвета выделенной записи-->
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+                                <DataGrid.Resources>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                                </DataGrid.Resources>
+                            </DataGrid>
+                        </Grid>
+                        <!--Даты и другое-->
+                        <Grid Grid.Row="0" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="32"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="21"/>
+                                <RowDefinition Height="27"/>
+                                <RowDefinition Height="33"/>
+                            </Grid.RowDefinitions>
+                            <!--Дата начала рейса-->
+                            <Label Content="Дата начала рейса" Grid.Row="0" Margin="3" HorizontalAlignment="Center" Width="112"/>
+                            <DatePicker Grid.Row="1" Margin="3" HorizontalAlignment="Center" Width="100"
+                                        SelectedDate="{Binding VoyagesViewModel.SelectedItem.DateStart}"/>
+                            <Label Content="Дата окончания рейса" Grid.Row="2" Margin="3" HorizontalAlignment="Center" Width="134"/>
+                            <!--Дата окончания рейса-->
+                            <DatePicker Grid.Row="3" Margin="3" HorizontalAlignment="Center" Width="100" 
+                                        SelectedDate="{Binding VoyagesViewModel.SelectedItem.DateEnd}" />
+                            <!--Тип рейса-->
+                            <Label Content="Тип рейса" Grid.Row="5" HorizontalAlignment="Center" />
+                            <ComboBox Grid.Row="6" Height="26" Margin="3" 
+                                      ItemsSource="{Binding VoyagesViewModel.VoyageTypes}" 
+                                      SelectedValue="{Binding VoyagesViewModel.SelectedItem.VoyageType}"
+                                      DisplayMemberPath="Name"/>
+                        </Grid>
+                        <!--Примечание к рейсу-->
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="26"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Label Content="Примечание к рейсу" Grid.Row="0" HorizontalAlignment="Center"/>
+                            <TextBox Grid.Row="1" Margin="5"
+                                     Text="{Binding VoyagesViewModel.SelectedItem.Note}"/>
+                        </Grid>
+                    </Grid>
+                    <!--Список рейсов-->
+                    <DataGrid Grid.Row="1" Grid.Column="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single"
+                              ItemsSource="{Binding Source={StaticResource VoyagesCollection}}"
+                              SelectedItem="{Binding VoyagesViewModel.SelectedItem}" >
+
+                        <DataGrid.InputBindings>
+                            <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding Commands.ContinueVoyage}"/>
+                        </DataGrid.InputBindings>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                            <DataGridTextColumn Header="Тип судна" Binding="{Binding Vessel.Type}"/>
+                            <DataGridTextColumn Header="Название судна" Binding="{Binding Vessel.Name}"/>
+                            <DataGridTextColumn Header="Дата начала" Binding="{Binding DateStart,StringFormat='dd.MM.yyyy'}"/>
+                            <DataGridTextColumn Header="Дата окончания" Binding="{Binding DateEnd,StringFormat='dd.MM.yyyy'}"/>
+                            <DataGridCheckBoxColumn Header="Финализирован" Binding="{Binding IsFinalized}" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Кол-во станций" Binding="{Binding Stations.Count}"/>
+                            <DataGridTextColumn Header="Кол-во станций" Binding="{Binding GearName}"/>
+                            <DataGridTextColumn Header="Примечание" Binding="{Binding Note}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <!--Вкладка станций-->
+            <TabItem Header="Станции" TabIndex="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="390"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="52"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!--Кнопки "Назад"-->
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                        <Button Content=" Назад к рейсам " Margin="5" Height="42" Width="150"
+                                Command="{Binding Commands.BackToVoyages}"/>
+                    </StackPanel>
+                    <!--Форма записи станции-->
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="195"/>
+                            <ColumnDefinition Width="195"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="146"/>
+                            <RowDefinition Height="261*"/>
+                            <RowDefinition Height="79*"/>
+                        </Grid.RowDefinitions>
+
+                        <!--Квадраты-->
+                        <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="154"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <!--Варианты районов и фильтр квадратов-->
+                            <StackPanel Grid.Row="0" Margin="3">
+                                <TextBlock Text="Вариант районирования:" Margin="3" HorizontalAlignment="Center"/>
+                                <ComboBox Margin="3"
+                                          SelectedValue="{Binding StationsViewModel.SelectedPartitionVariant}"
+                                          ItemsSource="{Binding StationsViewModel.PartitionVariants}"
+                                          DisplayMemberPath="Name">
+                                </ComboBox>
+                                <TextBlock Text="Район:" Margin="3" HorizontalAlignment="Center"/>
+                                <ComboBox Margin="3"
+                                          ItemsSource="{Binding Source={StaticResource StationsDistrictsCollection}}"
+                                          SelectedValue="{Binding StationsViewModel.SelectedDistrict}"
+                                          DisplayMemberPath="Name"/>
+                                <TextBlock Text="Фильтр по названию квадрата:" HorizontalAlignment="Center" Margin="3"/>
+                                <DockPanel>
+                                    <Button Content="X" Height="20" Width="20" Margin="3" HorizontalAlignment="Right" 
+                                            DockPanel.Dock="Right"
+                                            Command="{Binding Commands.SetObjectToNull}" CommandParameter="Square"/>
+                                    <TextBox Margin="3" Height="20" 
+                                             Text="{Binding StationsViewModel.FilterSquareName, UpdateSourceTrigger=PropertyChanged}"/>
+                                </DockPanel>
+                            </StackPanel>
+                            <!--Таблица квадратов-->
+                            <DataGrid Grid.Row="1" IsReadOnly="True" SelectionMode="Single" Margin="3,3,3,10" AutoGenerateColumns="False"
+                                ItemsSource="{Binding Source={StaticResource StationsSquaresCollection}}"
+                                SelectedItem="{Binding StationsViewModel.SelectedItem.Square}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                                </DataGrid.Columns>
+                                <!--Изменение цвета выделенной записи-->
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+                                <DataGrid.Resources>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                                </DataGrid.Resources>
+                            </DataGrid>
+                        </Grid>
+                        <!--Координаты-->
+                        <StackPanel Grid.Row="0" Grid.Column="1">
+                            <!--Координаты-->
+                            <StackPanel Margin="3">
+                                <!--Координаты начала станции-->
+                                <TextBlock Text="Координаты начала станции:" Margin="3"/>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <TextBox Text="{Binding StationsViewModel.SelectedItem.CoordsStartN, StringFormat='00.00000'}" Width="150"/>
+                                    <TextBlock Text=" с.ш."/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <TextBox Text="{Binding StationsViewModel.SelectedItem.CoordsStartE, StringFormat='00.00000'}" Width="150"/>
+                                    <TextBlock Text=" з.д."/>
+                                </StackPanel>
+                                <!--Координаты окончания станции-->
+                                <TextBlock Text="Координаты окончания станции:" Margin="3"/>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <TextBox Text="{Binding StationsViewModel.SelectedItem.CoordsEndN, StringFormat='00.00000'}" Width="150"/>
+                                    <TextBlock Text=" с.ш."/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Margin="3">
+                                    <TextBox Text="{Binding StationsViewModel.SelectedItem.CoordsEndE, StringFormat='00.00000'}" Width="150"/>
+                                    <TextBlock Text=" з.д."/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+                            <DockPanel >
+                                <TextBlock Text="Номер станции:"  Margin="3"/>
+                                <TextBox Width="50"  Margin="3" HorizontalAlignment="Right"
+                                         Text="{Binding StationsViewModel.SelectedItem.StationNumber}"/>
+                            </DockPanel>
+                            <!--Орудие лова-->
+                            <StackPanel Margin="3">
+                                <TextBlock Text="Орудие лова:" Margin="3" HorizontalAlignment="Center"/>
+                                <ComboBox Margin="3"
+                                      ItemsSource="{Binding StationsViewModel.Gears}"
+                                      SelectedValue="{Binding StationsViewModel.SelectedItem.Gear}"
+                                      DisplayMemberPath="Name"/>
+                            </StackPanel>
+                            <!--Дата станции-->
+                            <StackPanel Margin="3">
+                                <TextBlock Text="Дата станции:" Margin="3" HorizontalAlignment="Center"/>
+                                <DatePicker Margin="3"
+                                    SelectedDate="{Binding StationsViewModel.SelectedItem.Date}"/>
+                            </StackPanel>
+                            <!--Время станции-->
+                            <StackPanel>
+                                <TextBlock Text="Время станции"  Margin="3" HorizontalAlignment="Center"/>
+                                <DockPanel>
+                                    <TextBlock Text="Начала:" Margin="3"/>
+                                    <!--<xctk:TimePicker Margin="3" HorizontalAlignment="Right" Width="70"
+                                                      ShowDropDownButton="False"  
+                                                     Text="{Binding StationsViewModel.SelectedItem.TimeStart, Mode=TwoWay}"/>-->
+                                    <TextBox Margin="3" HorizontalAlignment="Right" Width="70"
+                                             Text="{Binding StationsViewModel.SelectedItem.TimeStart}"/>
+                                </DockPanel>
+                                <DockPanel >
+                                    <TextBlock Text="Окончания:" Margin="3"/>
+                                    <!--<xctk:TimePicker Margin="3" HorizontalAlignment="Right" Width="70"
+                                                      ShowDropDownButton="False" 
+                                                     Text="{Binding StationsViewModel.SelectedItem.TimeEnd, Mode=TwoWay}"/>-->
+                                    <TextBox Margin="3" HorizontalAlignment="Right" Width="70"
+                                             Text="{Binding StationsViewModel.SelectedItem.TimeEnd}"/>
+                                </DockPanel>
+                            </StackPanel>
+                            <!--Грунт-->
+                            <StackPanel>
+                                <TextBlock Text="Грунт:" Margin="3" HorizontalAlignment="Center"/>
+                                <ComboBox Margin="3"
+                                          ItemsSource="{Binding StationsViewModel.Grounds}"
+                                          SelectedValue="{Binding StationsViewModel.SelectedItem.Ground}"
+                                          DisplayMemberPath="Name"/>
+                            </StackPanel>
+                            <!--Ветер-->
+                            <StackPanel>
+                                <Separator/>
+                                <TextBlock Text="Ветер" Margin="3" HorizontalAlignment="Center"/>
+                                <DockPanel>
+                                    <TextBlock Text="Направление:" Margin="3"/>
+                                    <ComboBox Width="50" Margin="3" HorizontalAlignment="Right"
+                                             ItemsSource="{Binding StationsViewModel.WindDirections}"
+                                              SelectedValue="{Binding StationsViewModel.SelectedItem.WindDirects}"
+                                              DisplayMemberPath="NameShortRus"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBlock Text="Скорость, м/с:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.WindSpeed}"/>
+                                </DockPanel>
+                            </StackPanel>
+                            <StackPanel>
+                                <Separator/>
+                                <DockPanel>
+                                    <TextBlock Text="Волнение, балл:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.Waving}"/>
+                                </DockPanel>
+                                <DockPanel >
+                                    <TextBlock Text="Глубина, м.:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.Depth}"/>
+                                </DockPanel>
+                            </StackPanel>
+                            <!--Температура-->
+                            <StackPanel>
+                                <Separator/>
+                                <TextBlock Text="Температура" Margin="3" HorizontalAlignment="Center"/>
+                                <DockPanel>
+                                    <TextBlock Text="Воздуха:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.TempAir}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBlock Text="Поверхности:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.TempWaterSurface}"/>
+                                </DockPanel>
+                                <DockPanel >
+                                    <TextBlock Text="На глубине 5м.:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.TempWater5M}"/>
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBlock Text="Дна:" Margin="3"/>
+                                    <TextBox Width="50" HorizontalAlignment="Right" Margin="3"
+                                             Text="{Binding StationsViewModel.SelectedItem.TempWaterBottom}"/>
+                                </DockPanel>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </Grid>
+                    <!--Кнопки таблицы станций-->
+                    <Grid Grid.Column="1" Grid.Row="0" Margin="5,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Продолжить ввод станции" Margin="5" Height="42" Width="200"
+                                    Command="{Binding Commands.ContinueStation}"/>
+                            <Button Content="Создать новую станцию" Margin="5" Height="42" Width="200"
+                                    Command="{Binding StationsViewModel.Commands.AddEmptyItem}"/>
+                            <Button Content="Удалить выбранную станцию" Margin="5" Height="42" Width="200"
+                                    Command="{Binding StationsViewModel.Commands.Delete}"/>
+                        </StackPanel>
+
+                    </Grid>
+                    <!--Таблица станций-->
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <DataGrid Margin="10" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False"
+                                    ItemsSource="{Binding Source={StaticResource StationsCollection}}" 
+                                    SelectedItem="{Binding StationsViewModel.SelectedItem}">
+                            <DataGrid.InputBindings>
+                                <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding Commands.ContinueStation}"/>
+                            </DataGrid.InputBindings>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                                <DataGridTextColumn Header="Квадрат" Binding="{Binding Square.Name}"/>
+                                <DataGridTextColumn Header="Дата" Binding="{Binding Date, StringFormat='dd.MM.yyyy'}"/>
+                                <DataGridTextColumn Header="Нач. коорд. с.ш." Binding="{Binding CoordsStartN, StringFormat='00.00000'}"/>
+                                <DataGridTextColumn Header="Нач. коорд. з.д." Binding="{Binding CoordsStartE, StringFormat='00.00000'}"/>
+                                <DataGridTextColumn Header="Кон. коорд. с.ш." Binding="{Binding CoordsEndN, StringFormat='00.00000'}"/>
+                                <DataGridTextColumn Header="Кон. коорд. з.д." Binding="{Binding CoordsEndE, StringFormat='00.00000'}"/>
+                                <DataGridTextColumn Header="Орудие лова" Binding="{Binding Gear.Name}"/>
+                                <DataGridTextColumn Header="Грунт" Binding="{Binding Ground.Name}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <!--Вкладка уловов-->
+            <TabItem Header="Уловы" TabIndex="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="52"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="390"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+                        <Button Content=" Назад к Рейсам " Height="42" Width="150" Margin="5"
+                                Command="{Binding Commands.BackToVoyages}"/>
+                        <Button Content=" Назад к Станциям " Height="42" Width="150" Margin="5"
+                                Command="{Binding Commands.BackToStations}"/>
+                    </StackPanel>
+                    <!--Форма записи уловов-->
+                    <Grid Grid.Row="1" Grid.Column="0" 
+                          >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="145*"/>
+                            <RowDefinition Height="357*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="13*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+                            <DockPanel>
+                                <TextBlock Text="Вес, гр:" Margin="3"/>
+                                <TextBox Margin="3" Width="100" HorizontalAlignment="Right"
+                                         Text="{Binding HaulsViewModel.SelectedItem.Weight}"/>
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock Text="Кол-во, шт:" Margin="3"/>
+                                <TextBox Margin="3" Width="100" HorizontalAlignment="Right"
+                                         Text="{Binding HaulsViewModel.SelectedItem.Pieces}"/>
+                            </DockPanel>
+                            <DockPanel>
+                                <TextBlock Text="Число проб:" Margin="3"/>
+                                <TextBox Margin="3" Width="100" HorizontalAlignment="Right"
+                                         Text="{Binding HaulsViewModel.SelectedItem.NumOfSamples}"/>
+                            </DockPanel>
+                            <TextBlock Text="Примечание" Margin="3" HorizontalAlignment="Center"/>
+                            <TextBox Height="200" Text="{Binding HaulsViewModel.SelectedItem.Note}"/>
+                        </StackPanel>
+                        <!--Типы рыб-->
+                        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="16"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <StackPanel>
+                                <TextBlock Text="Виды рыбы" HorizontalAlignment="Center"/>
+
+                            </StackPanel>
+                            <DataGrid Grid.Row="1" Margin="5" AutoGenerateColumns="False" IsReadOnly="True"
+                                      SelectionMode="Single"
+                                      ItemsSource="{Binding HaulsViewModel.Fishes}"
+                                      SelectedValue="{Binding HaulsViewModel.SelectedItem.Fish}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                                    <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                                </DataGrid.Columns>
+                                <!--Изменение цвета выделенной записи-->
+                                <DataGrid.CellStyle>
+                                    <Style TargetType="DataGridCell">
+                                        <Setter Property="BorderThickness" Value="0"/>
+                                    </Style>
+                                </DataGrid.CellStyle>
+                                <DataGrid.Resources>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                                </DataGrid.Resources>
+                            </DataGrid>
+                        </Grid>
+
+                    </Grid>
+                    <!--Кнопки коллекции уловов-->
+                    <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal" Margin="5,0,0,0">
+                        <Button Content=" Перейти в в/р, б/а и промеры " Margin="5" Height="42" Width="200"
+                                Command="{Binding Commands.ContinueHaul}"/>
+                        <Button Content=" Добавить новый улов (&quot;+&quot;) " Margin="5" Height="42" Width="200"
+                                Command="{Binding HaulsViewModel.Commands.AddEmptyItem}"/>
+                        <Button Content=" Удалить выбранный улов " Margin="5" Height="42" Width="200" 
+                                Command="{Binding HaulsViewModel.Commands.Delete}"/>
+                    </StackPanel>
+                    <!--Коллекция уловов-->
+                    <DataGrid Name="dataGridHauls" Grid.Column="1" Grid.Row="1" Margin="10" SelectionMode="Single" 
+                              AutoGenerateColumns="False" CanUserAddRows="False"
+                              ItemsSource="{Binding Source={StaticResource HaulsCollection}}" 
+                              SelectedItem="{Binding HaulsViewModel.SelectedItem}"
+                              PreviewKeyDown="HaulsDataGrid_PreviewKeyDown">
+                        <DataGrid.InputBindings>
+                            <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding Commands.ContinueHaul}"/>
+                            <MouseBinding MouseAction="RightClick" Command="{Binding HaulsViewModel.Commands.AddEmptyItem}" 
+                                          CommandParameter="{Binding ElementName=dataGridHauls}"/>
+                        </DataGrid.InputBindings>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Кол-во проб" Binding="{Binding NumOfSamples}"/>
+                            <DataGridTextColumn Header="Код рыбы" Binding="{Binding FishId}"/>
+                            <DataGridTextColumn Header="Вес" Binding="{Binding Weight}"/>
+                            <DataGridTextColumn Header="Кол-во" Binding="{Binding Pieces}"/>
+                            <DataGridTextColumn Header="Примечание" Binding="{Binding Note}"/>
+                        </DataGrid.Columns>
+                        <!--Изменение цвета выделенной записи-->
+                        <DataGrid.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="BorderThickness" Value="0"/>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{x:Static SystemColors.HighlightColor}"/>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}" Color="{x:Static SystemColors.HighlightTextColor}"/>
+                        </DataGrid.Resources>
+                    </DataGrid>
+
+                </Grid>
+            </TabItem>
+            <!--Вкладка нализов улова-->
+            <TabItem Header="Анализ улова" TabIndex="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.ColumnSpan="2">
+                        <Button Content="К рейсам" Width="150" Height="30" Margin="5,5,5,10"
+                                Command="{Binding Commands.BackToVoyages}"/>
+                        <Button Content="К станциям" Width="150" Height="30" Margin="5,5,5,10"
+                                Command="{Binding Commands.BackToStations}"/>
+                        <Button Content="К уловам" Width="150" Height="30" Margin="5,5,5,10"
+                                Command="{Binding Commands.BackToHauls}"/>
+                    </StackPanel>
+                    <TabControl Background="#FFE5E5E5" Grid.Row="1" Grid.Column="0">
+                        <TabControl.Resources>
+                            <Style TargetType="TabItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TabItem">
+                                            <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                                <ContentPresenter x:Name="ContentSite"
+                                                                  VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Center"
+                                                                  ContentSource="Header"
+                                                                  Margin="10,2"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="False">
+                                                    <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TabControl.Resources>
+                        <!--Вариационный ряд-->
+                        <TabItem Header="Вариационный ряд" TabIndex="0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="390"/>
+                                    <ColumnDefinition Width="272*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="52"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                                    <Button Content=" Новая запись (&quot;+&quot;) " Height="42" Width="200" Margin="5"
+                                            Command="{Binding VarSeriesViewModel.Commands.AddEmptyItem}"/>
+                                    <Button Content="Удалить" Height="42" Width="200" Margin="5"
+                                            Command="{Binding VarSeriesViewModel.Commands.Delete}"/>
+                                </StackPanel>
+                                <Grid Grid.Column="0" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="48"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0">
+                                        <TextBlock Text="Выбранная рыба"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.FishId, StringFormat=Код: {0}}"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.Fish.Name, StringFormat=Название: {0}}"/>
+                                    </StackPanel>
+
+
+                                </Grid>
+                                <DataGrid Grid.Column="1" Grid.Row="1" Margin="10" SelectionMode="Single" AutoGenerateColumns="False"
+                                          CanUserAddRows="False" CanUserDeleteRows="False"
+                                  ItemsSource="{Binding Source={StaticResource VarSeriesCollection}}"
+                                  SelectedItem="{Binding VarSeriesViewModel.SelectedItem}"
+                                  PreviewKeyDown="VarSeriesDataGrid_OnPreviewKeyDown">
+                                    <DataGrid.InputBindings>
+                                        <MouseBinding MouseAction="RightClick" Command="{Binding VarSeriesViewModel.Commands.AddEmptyItem}"/>
+                                    </DataGrid.InputBindings>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Длина 1 (мм)" Binding="{Binding Length1}"/>
+                                        <DataGridTextColumn Header="Длина 2 (мм)" Binding="{Binding Length2}"/>
+                                        <DataGridTextColumn Header="Пол (ж/м/? - 1/2/0)" Binding="{Binding Sex}"/>
+                                        <DataGridTextColumn Header="Кол-во" Binding="{Binding Pieces}"/>
+                                        <DataGridTextColumn Header="Вес (гр)" Binding="{Binding Weight}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+
+                            </Grid>
+                        </TabItem>
+                        <!--Биологический анализ-->
+                        <TabItem Header="Биологический анализ" TabIndex="1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="390"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="52"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0" Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="48"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="193*"/>
+                                        <ColumnDefinition Width="216*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0">
+                                        <TextBlock Text="Выбранная рыба"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.FishId, StringFormat=Код: {0}}"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.Fish.Name, StringFormat=Название: {0}}"/>
+                                    </StackPanel>
+                                    <DataGrid Grid.Row="1" Grid.Column="0" Margin="5"
+                                              SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False"
+                                              ItemsSource="{Binding BioAnsViewModel.GonadsStages}"
+                                              SelectedItem="{Binding BioAnsViewModel.SelectedItem.GonadsStage}">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                                            <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                                            <DataGridTextColumn Header="Альт. название" Binding="{Binding NameAlt}"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                    <DataGrid Grid.Row="1" Grid.Column="1" Margin="5"
+                                              SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False"
+                                              ItemsSource="{Binding BioAnsViewModel.Ages}"
+                                              SelectedItem="{Binding BioAnsViewModel.SelectedItem.Age}">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Header="ID" Binding="{Binding Id}"/>
+                                            <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
+                                            <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
+                                        </DataGrid.Columns>
+
+                                    </DataGrid>
+
+                                </Grid>
+                                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                    <Button Content=" Новая запись " Margin="5" Width="200" Height="42"
+                                            Command="{Binding BioAnsViewModel.Commands.AddEmptyItem}"/>
+                                    <Button Content="Удалить" Margin="5" Width="200" Height="42"
+                                            Command="{Binding BioAnsViewModel.Commands.Delete}"/>
+                                </StackPanel>
+                                <DataGrid Grid.Row="1" Grid.Column="1" Margin="10"
+                                          AutoGenerateColumns="False" SelectionMode="Single"
+                                          CanUserAddRows="False" CanUserDeleteRows="False"
+                                          ItemsSource="{Binding Source={StaticResource BioAnsCollection}}"
+                                          SelectedItem="{Binding BioAnsViewModel.SelectedItem}"
+                                          PreviewKeyDown="BioAnDataGrid_OnPreviewKeyDown">
+                                    <DataGrid.InputBindings>
+                                        <MouseBinding MouseAction="RightClick" Command="{Binding BioAnsViewModel.Commands.AddEmptyItem}"/>
+                                    </DataGrid.InputBindings>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Длина, мм" Binding="{Binding Length}"/>
+                                        <DataGridTextColumn Header="Вес, гр" Binding="{Binding Weight}"/>
+                                        <DataGridTextColumn Header="Пол (ж/м/? - 1/2/0)" Binding="{Binding Sex}"/>
+                                        <DataGridTextColumn Header="Код зрелости гонад" Binding="{Binding GonadsStageId}"/>
+                                        <DataGridTextColumn Header="Нап. жел." Binding="{Binding Belly}"/>
+                                        <DataGridTextColumn Header="Нап. киш." Binding="{Binding Bowel}"/>
+                                        <DataGridTextColumn Header="Жирность" Binding="{Binding Richness}"/>
+                                        <DataGridTextColumn Header="Код возраста" Binding="{Binding AgeId}"/>
+                                        <DataGridTextColumn Header="Вес гонад, гр" Binding="{Binding GonadsWeight}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Grid>
+                        </TabItem>
+                        <!--Промеры-->
+                        <TabItem Header="Промеры" TabIndex="2">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60*"/>
+                                    <RowDefinition Height="419*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="390"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                    <Button Content=" Новая запись " Height="42" Width="200" Margin="5"
+                                            Command="{Binding MeasurementsViewModel.Commands.AddEmptyItem}"/>
+                                    <Button Content=" Удалить " Height="42" Width="200" Margin="5"
+                                            Command="{Binding MeasurementsViewModel.Commands.Delete}"/>
+                                </StackPanel>
+                                <Grid Grid.Row="1" Grid.Column="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="48"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0">
+                                        <TextBlock Text="Выбранная рыба"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.FishId, StringFormat=Код: {0}}"/>
+                                        <TextBlock Text="{Binding HaulsViewModel.SelectedItem.Fish.Name, StringFormat=Название: {0}}"/>
+                                    </StackPanel>
+                                </Grid>
+                                <DataGrid Grid.Row="1" Grid.Column="1" Margin="10" AutoGenerateColumns="False"
+                                          CanUserAddRows="False" CanUserDeleteRows="False"
+                                          ItemsSource="{Binding Source={StaticResource MeasurementsCollection}}"
+                                          SelectedItem="{Binding MeasurementsViewModel.SelectedItem}"
+                                          PreviewKeyDown="MeasurementsDataGrid_OnPreviewKeyDown">
+                                    <DataGrid.InputBindings>
+                                        <MouseBinding MouseAction="RightClick" Command="{Binding BioAnsViewModel.Commands.AddEmptyItem}"/>
+                                    </DataGrid.InputBindings>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Длина 1" Binding="{Binding Length1}"/>
+                                        <DataGridTextColumn Header="Длина 2" Binding="{Binding Length2}"/>
+                                        <DataGridTextColumn Header="Мин. длина" Binding="{Binding LengthMin}"/>
+                                        <DataGridTextColumn Header="Макс. длина" Binding="{Binding LengthMax}"/>
+                                        <DataGridTextColumn Header="Кол-во" Binding="{Binding Pieces}"/>
+                                        <DataGridTextColumn Header="Вес (гр)" Binding="{Binding Weight}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <!--Вкладка справочников-->
+            <TabItem Header="Справочники" TabIndex="4">
+                <Grid>
+                    <TabControl Background="#FFE5E5E5">
+                        <TabControl.Resources>
+                            <Style TargetType="TabItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="TabItem">
+                                            <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                                <ContentPresenter x:Name="ContentSite"
+                                                                  VerticalAlignment="Center"
+                                                                  HorizontalAlignment="Center"
+                                                                  ContentSource="Header"
+                                                                  Margin="10,2"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsSelected" Value="True">
+                                                    <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                                </Trigger>
+                                                <Trigger Property="IsSelected" Value="False">
+                                                    <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </TabControl.Resources>
+                        <TabItem Header="Суда">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="362*"/>
+                                    <ColumnDefinition Width="863*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="34*"/>
+                                    <RowDefinition Height="241*"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel Orientation="Horizontal" Grid.Row="0">
+                                    <Button Content="К рейсам" Width="150" Height="30" Margin="5,5,5,10"
+                                            Command="{Binding Commands.BackToVoyages}"/>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+                                    <Button Content="Добавить" Width="150" Height="30" Margin="5"
+                                            Command="{Binding VesselsViewModel.Commands.AddEmptyItem}"/>
+                                    <Button Content="Удалить" Width="150" Height="30" Margin="5"
+                                            Command="{Binding VesselsViewModel.Commands.Delete}"/>
+                                </StackPanel>
+                                <DataGrid Grid.Column="1" Grid.Row="1" Margin="3" AutoGenerateColumns="False"
+                                          SelectionMode="Single" CanUserAddRows="False"
+                                          ItemsSource="{Binding Source={StaticResource VesselsCollection}}"
+                                          SelectedValue="{Binding VesselsViewModel.SelectedItem}"
+                                          PreviewKeyDown="VesselsDataGrid_OnPreviewKeyDown">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Код судна" Binding="{Binding Id}"/>
+                                        <DataGridTextColumn Header="Тип судна" Binding="{Binding Type}"/>
+                                        <DataGridTextColumn Header="Название судна" Binding="{Binding Name}"/>
+                                    </DataGrid.Columns>
+
+                                </DataGrid>
+
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <!--Справочный текстблок-->
+        <StatusBar Grid.Row="3" FontSize="14">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StackPanel Orientation="Horizontal" Grid.Column="0">
+                <TextBlock Text="{Binding VoyagesViewModel.SelectedItem.Vessel.Type}" Foreground="DeepPink" />
+                <TextBlock Text=" "/>
+                <TextBlock Text="{Binding VoyagesViewModel.SelectedItem.Vessel.Name}"  Foreground="DeepPink"/>
+                <TextBlock Text=" "/>
+                <TextBlock Text="{Binding VoyagesViewModel.SelectedItem.DateStart,StringFormat='dd.MM.yyyy'}"  Foreground="DeepPink"/>
+                <TextBlock Text=" - "/>
+                <TextBlock Text="{Binding VoyagesViewModel.SelectedItem.DateEnd,StringFormat='dd.MM.yyyy'}"  Foreground="DeepPink"/>
+                <TextBlock Text=" | "/>
+                <TextBlock Text="{Binding StationsViewModel.SelectedItem.StationNumber}" Foreground="MediumBlue"/>
+                <TextBlock Text=" "/>
+                <TextBlock Text="{Binding StationsViewModel.SelectedItem.Squares.Name}"  Foreground="MediumBlue"/>
+                <TextBlock Text=" | "/>
+                <TextBlock Text="{Binding HaulsViewModel.SelectedItem.FishId}" Foreground="Purple"/>
+                <TextBlock Text=" "/>
+                <TextBlock Text="{Binding HaulsViewModel.SelectedItem.Fishes.Name}" Foreground="Purple"/>
+            </StackPanel>
+        </StatusBar>
+
+    </Grid>
+</Window>

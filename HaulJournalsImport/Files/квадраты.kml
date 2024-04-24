@@ -1,0 +1,2850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+  <Document>
+    <Folder>
+      <name>Новая категория</name>
+      <open>1</open>
+      <Style>
+        <ListStyle>
+          <listItemType>check</listItemType>
+          <bgColor>00ffffff</bgColor>
+        </ListStyle>
+      </Style>
+      <Placemark>
+        <name>38т</name>
+        <description>31.01.2018 16:19:40</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8488833333333,45.8220666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38с</name>
+        <description>31.01.2018 16:20:20</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8626166666667,45.8825666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38р</name>
+        <description>02.02.2018 7:43:18</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8753194444444,45.9600666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39р</name>
+        <description>02.02.2018 7:44:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.9247583333333,45.9944222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39п</name>
+        <description>02.02.2018 7:45:15</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.9590888888889,46.0530666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>40п</name>
+        <description>02.02.2018 7:46:29</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.0339333333333,46.0678361111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>41п</name>
+        <description>02.02.2018 7:46:50</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1259444444444,46.0363861111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42п</name>
+        <description>02.02.2018 7:47:15</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1729805555556,46.0768888888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42о</name>
+        <description>02.02.2018 7:48:00</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1942666666667,46.1487666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42н</name>
+        <description>02.02.2018 7:48:44</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.2086861111111,46.2105722222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>43м</name>
+        <description>02.02.2018 7:49:24</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.2649916666667,46.2723083333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42м</name>
+        <description>02.02.2018 7:49:49</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.206625,46.2884444444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42л</name>
+        <description>02.02.2018 7:50:41</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1784722222222,46.3429833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>41л</name>
+        <description>02.02.2018 7:51:12</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1194222222222,46.357675,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>40л</name>
+        <description>02.02.2018 7:51:29</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.0404583333333,46.3681,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39л</name>
+        <description>02.02.2018 7:51:43</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.956,46.3586222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38л</name>
+        <description>02.02.2018 7:52:26</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.874975,46.3742583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38к</name>
+        <description>02.02.2018 7:52:41</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8543777777778,46.4405444444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>37и</name>
+        <description>02.02.2018 7:53:03</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.7829666666667,46.5398194444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>37з</name>
+        <description>02.02.2018 7:53:28</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.7671722222222,46.6026,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>37з</name>
+        <description>02.02.2018 7:53:51</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8131777777778,46.6591833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38з</name>
+        <description>02.02.2018 7:55:22</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8756611111111,46.6535277777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39з</name>
+        <description>02.02.2018 7:55:34</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.956,46.6516416666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>40з</name>
+        <description>02.02.2018 7:55:47</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.0349638888889,46.6554111111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>41ж</name>
+        <description>02.02.2018 7:56:28</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.1235416666667,46.719,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42ж</name>
+        <description>02.02.2018 7:56:55</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.2086861111111,46.72465,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>43ж</name>
+        <description>02.02.2018 7:57:55</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.306875,46.7152333333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>45з</name>
+        <description>02.02.2018 7:58:17</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.4648055555556,46.6577694444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>44з</name>
+        <description>02.02.2018 7:58:38</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.3899611111111,46.6629527777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>46з</name>
+        <description>02.02.2018 7:58:54</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.5156166666667,46.6624805555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>47ж</name>
+        <description>02.02.2018 7:59:14</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.5904611111111,46.6879222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>45е</name>
+        <description>02.02.2018 7:59:29</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.4222333333333,46.8304527777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>45д</name>
+        <description>02.02.2018 7:59:59</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.4565638888889,46.8882027777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>46д</name>
+        <description>02.02.2018 8:00:25</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.5423944444444,46.8863277777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>47д</name>
+        <description>02.02.2018 8:01:40</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.6220472222222,46.8938333333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>48д</name>
+        <description>02.02.2018 8:01:51</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.7044444444444,46.8980583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>49д</name>
+        <description>02.02.2018 8:02:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.7772277777778,46.9036861111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>50д</name>
+        <description>02.02.2018 8:02:30</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.8404,46.9130694444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>50г</name>
+        <description>02.02.2018 8:02:46</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.8706111111111,46.9707305555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>51г</name>
+        <description>02.02.2018 8:03:31</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.95095,46.98385,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>52г</name>
+        <description>02.02.2018 8:03:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.0065666666667,46.9960277777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>52в</name>
+        <description>02.02.2018 8:04:36</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.0429611111111,47.04705,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>53в</name>
+        <description>02.02.2018 8:05:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.1239833333333,47.0587472222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>54в</name>
+        <description>02.02.2018 8:05:58</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.2056944444444,47.0592138888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>55в</name>
+        <description>02.02.2018 8:06:10</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.2723,47.0423722222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>54б</name>
+        <description>02.02.2018 8:08:27</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.2050083333333,47.1241944444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>54а</name>
+        <description>02.02.2018 8:09:10</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>39.1933361111111,47.206825,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>51а</name>
+        <description>02.02.2018 8:09:34</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.970175,47.2030916666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39и</name>
+        <description>02.02.2018 8:10:32</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8348083333333,46.5016666666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>50а</name>
+        <description>02.02.2018 8:12:43</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.8979916666667,47.1778361111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>49а</name>
+        <description>02.02.2018 8:12:56</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.8094138888889,47.1708361111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>47б</name>
+        <description>02.02.2018 8:13:36</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.6233333333333,47.1129222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>46б</name>
+        <description>02.02.2018 8:14:30</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.5395638888889,47.1049777777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>42б</name>
+        <description>02.02.2018 8:15:05</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.2250805555556,47.0984333333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>41б</name>
+        <description>02.02.2018 8:16:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.0932444444444,47.0918888888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>40б</name>
+        <description>02.02.2018 8:17:02</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.0527305555556,47.0909555555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>39б</name>
+        <description>02.02.2018 8:17:11</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.937375,47.0914222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>38б</name>
+        <description>02.02.2018 8:17:31</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8831305555556,47.0937583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>37б</name>
+        <description>02.02.2018 8:18:26</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.8093166666667,47.0853444444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>35б</name>
+        <description>02.02.2018 8:18:46</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.6325027777778,47.08815,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>33в</name>
+        <description>02.02.2018 8:19:02</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.4828166666667,47.0135277777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>32г</name>
+        <description>02.02.2018 8:19:20</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.3966416666667,46.9338805555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>31д</name>
+        <description>02.02.2018 8:22:23</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.2812861111111,46.8566944444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>31г</name>
+        <description>02.02.2018 8:22:42</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.2696111111111,46.9280166666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>30г</name>
+        <description>02.02.2018 8:22:54</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.2222333333333,46.9280166666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>28д</name>
+        <description>02.02.2018 8:23:08</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.0416444444444,46.856225,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>27д</name>
+        <description>02.02.2018 8:23:55</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.9825944444444,46.8444861111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>26е</name>
+        <description>02.02.2018 8:24:07</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.8988222222222,46.7692888888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>25е</name>
+        <description>02.02.2018 8:25:21</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.7587472222222,46.7556472222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>24е</name>
+        <description>02.02.2018 8:26:04</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.7038166666667,46.7645833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>23е</name>
+        <description>02.02.2018 8:26:14</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.6279416666667,46.7645833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>22е</name>
+        <description>02.02.2018 8:26:24</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.5623666666667,46.7547055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>20ж</name>
+        <description>02.02.2018 8:26:44</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.3848694444444,46.6888055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>19ж</name>
+        <description>02.02.2018 8:26:56</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.3295944444444,46.6694888888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>19з</name>
+        <description>02.02.2018 8:27:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.3031583333333,46.6150416666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18и</name>
+        <description>02.02.2018 8:27:57</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.2262527777778,46.516375,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14з</name>
+        <description>02.02.2018 8:28:16</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.8788111111111,46.6181083333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13з</name>
+        <description>02.02.2018 8:29:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.8053416666667,46.5990027777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12з</name>
+        <description>02.02.2018 8:29:38</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.7428555555556,46.5876777777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11и</name>
+        <description>02.02.2018 8:29:57</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.6522194444444,46.5107055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10к</name>
+        <description>02.02.2018 8:30:07</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.5437277777778,46.4454527777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>09к</name>
+        <description>02.02.2018 8:30:30</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.4743777777778,46.4312583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>08л</name>
+        <description>02.02.2018 8:31:10</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.3912944444444,46.3540611111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>06к</name>
+        <description>02.02.2018 8:31:39</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.2237527777778,46.4421416666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>07л</name>
+        <description>02.02.2018 8:31:59</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.2786833333333,46.3460055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>06л</name>
+        <description>02.02.2018 8:32:12</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.2093333333333,46.3559583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>05л</name>
+        <description>02.02.2018 8:32:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.1523416666667,46.3436361111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>05м</name>
+        <description>02.02.2018 8:32:57</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.1310555555556,46.2791305555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>06н</name>
+        <description>02.02.2018 8:33:19</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.235425,46.1793805555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>04м</name>
+        <description>02.02.2018 8:33:38</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.0671972222222,46.2608583333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>01о</name>
+        <description>02.02.2018 8:34:27</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.8220638888889,46.1560777777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>01н</name>
+        <description>02.02.2018 8:34:55</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.8289305555556,46.1850861111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>05о</name>
+        <description>02.02.2018 8:35:46</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.1303666666667,46.1037333333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>04о</name>
+        <description>02.02.2018 8:36:05</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.0658222222222,46.089925,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>02р</name>
+        <description>02.02.2018 8:36:36</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.8907277777778,45.9631083333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>02с</name>
+        <description>02.02.2018 8:36:47</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.9058361111111,45.9072361111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>03т</name>
+        <description>02.02.2018 8:39:04</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.9724388888889,45.8092055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>03у</name>
+        <description>02.02.2018 8:39:16</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.993725,45.7445527777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>04ф</name>
+        <description>02.02.2018 8:39:45</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.0699444444444,45.654875,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>05х</name>
+        <description>02.02.2018 8:40:35</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.1571472222222,45.575625,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>06ц</name>
+        <description>02.02.2018 8:40:52</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.2374833333333,45.4909722222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>07ч</name>
+        <description>02.02.2018 8:41:41</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.3226277777778,45.4095638888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>08ч</name>
+        <description>02.02.2018 8:42:12</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.3796194444444,45.384975,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>09щ</name>
+        <description>02.02.2018 8:42:25</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.4778111111111,45.3227277777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>10щ</name>
+        <description>02.02.2018 8:42:53</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.5334277777778,45.3116222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>11щ</name>
+        <description>02.02.2018 8:43:02</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.6055277777778,45.3270722222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>12щ</name>
+        <description>02.02.2018 8:43:22</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.6728166666667,45.3323833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>13ч</name>
+        <description>02.02.2018 8:43:39</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.7620805555556,45.4100472222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>14ч</name>
+        <description>02.02.2018 8:44:03</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.9035305555556,45.4095638888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>15ч</name>
+        <description>02.02.2018 8:45:05</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>35.95915,45.3965472222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16ч</name>
+        <description>02.02.2018 8:45:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.0271277777778,45.4042611111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17ц</name>
+        <description>02.02.2018 8:45:30</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.1163916666667,45.4799,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18ц</name>
+        <description>02.02.2018 8:45:46</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.2063416666667,45.4871194444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>19ц</name>
+        <description>02.02.2018 8:45:54</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.2914861111111,45.4924166666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>20ц</name>
+        <description>02.02.2018 8:46:04</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.3848694444444,45.4823055555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>21ц</name>
+        <description>02.02.2018 8:46:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.4562805555556,45.4803805555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>23ч</name>
+        <description>02.02.2018 8:46:41</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.6444222222222,45.4023333333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>24ч</name>
+        <description>02.02.2018 8:47:23</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.7000388888889,45.3869027777778,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>25ц</name>
+        <description>02.02.2018 8:47:35</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.7893027777778,45.4683444444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>26ц</name>
+        <description>02.02.2018 8:47:48</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.8765083333333,45.4721944444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>27ч</name>
+        <description>02.02.2018 8:48:05</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.9863694444444,45.4095638888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>28ч</name>
+        <description>02.02.2018 8:48:14</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.0474833333333,45.3970305555556,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>29ч</name>
+        <description>02.02.2018 8:48:29</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.1243861111111,45.3864194444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>33ч</name>
+        <description>02.02.2018 8:48:49</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.4574083333333,45.3844916666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>34ч</name>
+        <description>02.02.2018 8:51:59</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.5247,45.4013694444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>35ц</name>
+        <description>02.02.2018 8:52:21</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.5885583333333,45.4808611111111,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>35х</name>
+        <description>02.02.2018 8:52:32</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.5899333333333,45.5414916666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>35ф</name>
+        <description>02.02.2018 8:52:55</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.5926777777778,45.6260694444444,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>36у</name>
+        <description>02.02.2018 8:53:13</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.7066611111111,45.7244222222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>37у</name>
+        <description>02.02.2018 8:54:18</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>37.7615944444444,45.7431138888889,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>03м</name>
+        <description>02.02.2018 8:55:12</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>34.993725,46.2525472222222,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>18з</name>
+        <description>02.02.2018 8:56:04</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.1878027777778,46.6687833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>17з</name>
+        <description>02.02.2018 8:56:14</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.1534694444444,46.6687833333333,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>16з</name>
+        <description>02.02.2018 8:56:40</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>36.0408611111111,46.6678416666667,0 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>43б</name>
+        <description>02.02.2018 8:58:12</description>
+        <Style>
+          <LabelStyle>
+            <color>A600FFFF</color>
+            <scale>0.785714285714286</scale>
+          </LabelStyle>
+          <IconStyle>
+            <scale>0.5</scale>
+            <Icon>
+              <href>files\1.png</href>
+            </Icon>
+            <hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+          </IconStyle>
+        </Style>
+        <Point>
+          <extrude>1</extrude>
+          <coordinates>38.2909972222222,47.1131555555556,0 </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

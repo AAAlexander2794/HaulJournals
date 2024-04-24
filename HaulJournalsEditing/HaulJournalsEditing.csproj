@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CEA2FA8-D25D-450B-B18A-4E8BC26C2781}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HaulJournalsEditing</RootNamespace>
+    <AssemblyName>HaulJournalsEditing</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework6.Npgsql, Version=3.1.1.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework6.Npgsql.3.1.1\lib\net45\EntityFramework6.Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=3.2.6.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.2.6\lib\net451\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.4.0\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main\Directories\DistrictsViewModel.cs" />
+    <Compile Include="Main\Directories\FishesViewModel.cs" />
+    <Compile Include="Main\Directories\GearsViewModel.cs" />
+    <Compile Include="Main\Directories\GroundsViewModel.cs" />
+    <Compile Include="Main\Directories\PartitionVariantsViewModel.cs" />
+    <Compile Include="Main\Directories\SquaresViewModel.cs" />
+    <Compile Include="Main\Directories\VoyageTypesViewModel.cs" />
+    <Compile Include="Main\Journals\BioAnOldsViewModel.cs" />
+    <Compile Include="Main\Journals\BioAnsViewModel.cs" />
+    <Compile Include="Main\Commands\BackToHaulsCommand.cs" />
+    <Compile Include="Main\Commands\BackToStationsCommand.cs" />
+    <Compile Include="Main\Commands\BackToVoyagesCommand.cs" />
+    <Compile Include="Main\Commands\Commands.cs" />
+    <Compile Include="Main\Commands\ContinueHaulCommand.cs" />
+    <Compile Include="Main\Commands\ContinueStationCommand.cs" />
+    <Compile Include="Main\Commands\ContinueVoyageCommand.cs" />
+    <Compile Include="Main\Commands\GoToDirectories.cs" />
+    <Compile Include="Main\Commands\LocalImportCommand.cs" />
+    <Compile Include="Main\Commands\ReloadCommand.cs" />
+    <Compile Include="Main\Commands\SaveCommand.cs" />
+    <Compile Include="Main\Commands\UploadLocalDataToRemoteCommand.cs" />
+    <Compile Include="Main\Directories\VesselsViewModel.cs" />
+    <Compile Include="Main\Commands\SetObjectToNull.cs" />
+    <Compile Include="Main\Journals\HaulsViewModel.cs" />
+    <Compile Include="Main\Login\LoginCommand.cs" />
+    <Compile Include="Enums\TabItems.cs" />
+    <Compile Include="Main\Journals\MeasurementsViewModel.cs" />
+    <Compile Include="Main\Journals\VarSeriesViewModel.cs" />
+    <Compile Include="Main\Commands\FinalizeVoyageCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Main\Login\LoginViewModel.cs" />
+    <Compile Include="Main\MainViewModel.cs" />
+    <Compile Include="Main\Journals\StationsViewModel.cs" />
+    <Compile Include="Main\Journals\VoyagesViewModel.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReferencesInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaulJournalsDAL\HaulJournalsDAL.csproj">
+      <Project>{21e36b7a-c308-41fe-a8c3-2f53a31c90f5}</Project>
+      <Name>HaulJournalsDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyClassLibrary\MyClassLibrary.csproj">
+      <Project>{17e339b4-4feb-4c54-bbf5-28413184def4}</Project>
+      <Name>MyClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MessageTexts.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

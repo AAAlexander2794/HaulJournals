@@ -1,0 +1,157 @@
+﻿<Window x:Class="HaulJournalsUI.Import.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HaulJournalsUI.Import"
+        mc:Ignorable="d"
+        Title="Main" Height="639.099" Width="707.252">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="21"/>
+            <RowDefinition/>
+            <RowDefinition Height="14"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="244*"/>
+                <ColumnDefinition Width="241*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Пути к файлам-->
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock Text="a"/>
+                    <TextBox x:Name="tbA">
+                        c:\.AAA\rocciaAllTables\2000\a04200071.xlsx
+                        </TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="b"/>
+                    <TextBox x:Name="tbB">
+                        c:\.AAA\rocciaAllTables\2000\b04200071.xlsx
+                        </TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="p"/>
+                    <TextBox x:Name="tbP">
+                        c:\.AAA\rocciaAllTables\2000\p04200071.xlsx
+                        </TextBox>
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="v"/>
+                    <TextBox x:Name="tbV">
+                        c:\.AAA\rocciaAllTables\2000\v04200071.xlsx
+                        </TextBox>
+                </DockPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Button Content="Прочитать файлы" Click="ReadXlsx"></Button>
+                <Button Content="Обработать файлы" Click="ProcessFiles"></Button>
+                <Button Content="Разобрать дубликаты" Click="Distinct"></Button>
+                <Button Content="Загрузить в базу" Click="SaveChanges"></Button>
+            </StackPanel>
+            <TabControl Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1">
+                <TabItem Header="Первичная обработка">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock>
+                            Все данные представлены в виде текстовых значений.
+                        </TextBlock>
+                        <TabControl Grid.Row="1">
+                            <TabItem Header="A">
+                                <DataGrid x:Name="dgA"></DataGrid>
+                            </TabItem>
+                            <TabItem Header="B">
+                                <DataGrid x:Name="dgB"></DataGrid>
+                            </TabItem>
+                            <TabItem Header="P">
+                                <DataGrid x:Name="dgP"></DataGrid>
+                            </TabItem>
+                            <TabItem Header="V">
+                                <DataGrid x:Name="dgV"></DataGrid>
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Рейсы">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Content="Станции выбранного рейса" Height="30" Margin="5" Width="200" HorizontalAlignment="Left" Click="ContinueVoyage"/>
+                            <Button Content="Объединить рейсы" Height="30" Margin="5" Width="200" HorizontalAlignment="Left" Click="UniteVoyages"/>
+                            <Button Content="Изменить дату окончания рейса" Height="30" Margin="5" Width="200" HorizontalAlignment="Left" Click="SetDateEnd"/>
+                            <DatePicker Name="dateEnd"/>
+                        </StackPanel>
+                        <DataGrid x:Name="dgVoyages" Grid.Row="1">
+                            <DataGrid.Columns>
+                                <!--<DataGridTextColumn Header="Кол-во" Binding="{Binding }"></DataGridTextColumn>-->
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Станции">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <Button Content="Уловы выбранной станции" Height="30" Margin="5" Width="200" HorizontalAlignment="Left" Click="ContinueStation"/>
+                        </StackPanel>
+                        <DataGrid x:Name="dgStations" Grid.Row="1"></DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Уловы">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <StackPanel>
+                            <Button Content="Анализы выбранного улова" Height="30" Margin="5" Width="200" HorizontalAlignment="Left" Click="ContinueHaul"/>
+                        </StackPanel>
+                        <DataGrid x:Name="dgHauls" DataContext="{Binding }" Grid.Row="1">
+                            <!--<DataGrid.Columns><DataGridTextColumn Header="b" Binding="{Binding }"></DataGridTextColumn></DataGrid.Columns>-->
+                        </DataGrid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Анализы">
+                    <Grid>
+                        <TabControl>
+                            <TabItem Header="Вариационный ряд">
+                                <Grid>
+                                    <DataGrid x:Name="dgVarSeries"></DataGrid>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Биологический анализ">
+                                <Grid>
+                                    <DataGrid x:Name="dgBioAns"></DataGrid>
+                                </Grid>
+                            </TabItem>
+                            <TabItem Header="Промеры">
+                                <Grid>
+                                    <DataGrid x:Name="dgMeasurements"></DataGrid>
+                                </Grid>
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Log">
+                    <TextBlock Name="tblLog"></TextBlock>
+                </TabItem>
+            </TabControl>
+        </Grid>
+
+    </Grid>
+</Window>
